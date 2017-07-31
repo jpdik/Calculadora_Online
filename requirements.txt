@@ -14,7 +14,6 @@ itsdangerous==0.24
 lockfile==0.8
 lxml==3.3.3
 oauthlib==0.6.1
-pyOpenSSL==0.13
 pycrypto==2.6.1
 pyserial==2.6
 pyxdg==0.25
