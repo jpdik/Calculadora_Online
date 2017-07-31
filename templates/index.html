@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv='cache-control' content='no-cache'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<title>Calculadora</title>
+</head>
+<body>
+	<div class="row">
+		<div class="col-sm-3 col-sm-offset-4 text-center">
+			<h1 class="title">Calculadora</h1>
+			<div class="panel panel-primary">
+			  <div class="panel-heading">
+			  	<textarea readonly class="form-control" rows="3" id="visor"readonly  ></textarea>
+			  </div>
+			<div class="panel text-center" id="teclas"> 
+				<div class="row">          
+				    <div class="btn-group-justified text-center">
+				      <button type="button" class="btn btn-success">ON</button>
+				      <button type="button" class="btn btn-danger">OFF</button>
+				      <button type="button" class="btn btn-default">C</button>
+				      <button type="button" class="btn btn-default">%</button> 
+				    </div>
+				</div>  
+				<div class="row">          
+				    <div class="btn-group-justified text-center">
+				      <button type="button" class="btn btn-default">7</button>
+				      <button type="button" class="btn btn-default">8</button>
+				      <button type="button" class="btn btn-default">9</button>
+				      <button type="button" class="btn btn-default">+</button> 
+				    </div>
+				</div>
+				<div class="row">
+				    <div class="btn-group-justified text-center">
+				      <button type="button" class="btn btn-default">4</button>
+				      <button type="button" class="btn btn-default">5</button>
+				      <button type="button" class="btn btn-default">6</button>
+				      <button type="button" class="btn btn-default">-</button>
+				    </div>
+				</div>
+				<div class="row">
+				    <div class="btn-group-justified text-center">
+				      <button type="button" class="btn btn-default">1</button>
+				      <button type="button" class="btn btn-default">2</button>
+				      <button type="button" class="btn btn-default">3</button>
+				      <button type="button" class="btn btn-default">*</button>
+				    </div>
+				</div>
+				<div class="row">
+				    <div class="btn-group-justified text-center">
+				      <button type="button" class="btn btn-default">0</button>
+				      <button type="button" class="btn btn-default">,</button>
+				      <button type="button" class="btn btn-default">=</button>
+				      <button type="button" class="btn btn-default">/</button>
+				    </div>
+			  	</div>
+			  </div>  
+			</div>
+		</div>
+	</div>
+
+	<div id="valor"></div>
+
+	<script src="https://rawgit.com/jpdik/DirShared/master/templates/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"> </script>
+</body>
+</html>

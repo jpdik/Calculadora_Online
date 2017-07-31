@@ -1,0 +1,16 @@
+#visor{
+  resize: none;
+
+}
+
+button[type="button"]{
+  padding: 10px 30px 10px 10px;
+  margin: 2px;
+}
+
+#teclas{
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
