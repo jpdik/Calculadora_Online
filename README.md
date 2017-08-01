@@ -1,23 +1,26 @@
 # Calculadora_Online
 Realizar cálculos em outro sistema de forma transparente
 
-# Configurar Heroku
+# Configurar Heroku para Python
 Se ainda não o tiver, instale o heroku pelo comando:
 
-## MacOS
+### MacOS
 Com homebrew:
 <pre>
 brew install heroku
 </pre>
 
-## Windows
+### Windows
 Download <a href="https://cli-assets.heroku.com/branches/v6/heroku-windows-386.exe">32-bit</a> ou <a href="https://cli-assets.heroku.com/branches/v6/heroku-windows-amd64.exe">64-bit</a>.
 
-## Linux
+### Linux
 A forma que considero facil é através do npm:
 <pre>
-npm install -g heroku-cli
+$ npm install -g heroku-cli
 </pre>
+
+## Fazendo login
+Realize sua credencial de acordo com os dados cadastrados no site:
 
 <pre>
 $ heroku login
@@ -25,4 +28,67 @@ Enter your Heroku credentials.
 Email: python@example.com
 Password:
 ...
+</pre>
+
+## Criando Aplicação
+Para criar a aplicação que vc utilizará o seu programa, vá até o diretório do mesmo e use o comando:
+
+<pre>
+$ heroku create [NomeAplicação]
+</pre>
+
+Será criado um uma aplicativo contendo na URL o parâmetro passado na função:
+
+<pre>
+NomeAplicação.herokuapp.com
+</pre>
+
+Através deste link voçê terá acesso a sua aplicação.
+
+## Configurando maquina antes do Upload
+Precisamos passar informações importantes para o heroku através de arquivos de configuração.
+
+Precisamos configurar o 'Procfile' o 'requirements.txt' e o 'runtime.txt'.
+
+#### Procfile
+Aqui passamos a configuração para rodar o servidor. iremos utilizar o 'guicorn'. no lugar de app deve ser substituído pelo nome do arquivo principal da apliação ('main').
+
+> web: gunicorn app:app
+
+#### requirements.txt
+Todos os requisitos para rodar a aplicação (bibliotecas) devem ser informadas neste arquivo juntamente de suas versões.
+Temos duas formas de obter estes valores:
+
+'pip freeze': É a forma mais simples, mas ele pega todas as bibliotecas do pip, então será necessário ajustes, o que não é muito bom.
+> pip freeze > requirements.txt
+
+'pipreqs' é uma forma mais simples. tudo que você precisa é instalá-lo. e passar para o comando o caminho de onde ele será gerado.
+
+<pre>
+$ pip install pipreqs
+$ pipreqs /path/to/project
+</pre>
+
+#### runtime.txt
+Precisamos informar para o heroku a versão do python também. Ele está prédefinido como python 3, então através deste arquivo modificamos:
+
+>python-2.7.12
+
+## Fazendo Upload da Aplicação
+O heroku tem uma simples integração com o Github. Para realizar o upload basta usar o comando:
+
+<pre>
+ $ git push heroku master
+</pre>
+
+Pronto! Sua aplicação será instalada passo a passo pelo console baseado nas suas configurações. Você poderá ver toda a instalação e todos os erros que podem acontecer durante ela. Se ela tiver total sucesso terá a seguinte mensagem.
+
+<pre>
+remote: Verifying deploy... done.
+</pre>
+
+Para checar erros de execução, verifique os logs:
+
+<pre>
+heroku logs
 </pre>
