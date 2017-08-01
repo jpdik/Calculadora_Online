@@ -6,7 +6,7 @@ Calculadora que realiza cálculos através de um servidor remoto transparentemen
 </p>
 
 ## Deploy automático
-Você pode ver um exemplo aqui.
+Você pode fazer um deploy do exemplo aqui. <br>
 <a href="https://heroku.com/deploy?template=https://github.com/jpdik/Calculadora_Online">
   <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
 </a>
