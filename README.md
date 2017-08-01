@@ -43,15 +43,17 @@ Será criado um uma aplicativo contendo na URL o parâmetro passado na função:
 NomeAplicação.herokuapp.com
 </pre>
 
+Caso não passe ele gerará um nome aleatório e o exibirá.
+
 Através deste link voçê terá acesso a sua aplicação.
 
 ## Configurando maquina antes do Upload
 Precisamos passar informações importantes para o heroku através de arquivos de configuração.
 
-Precisamos configurar o 'Procfile' o 'requirements.txt' e o 'runtime.txt'.
+Precisamos configurar o `Procfile` o `requirements.txt` e o `runtime.txt`.
 
 #### Procfile
-Aqui passamos a configuração para rodar o servidor. iremos utilizar o 'guicorn'. no lugar de app deve ser substituído pelo nome do arquivo principal da apliação ('main').
+Aqui passamos a configuração para rodar o servidor. iremos utilizar o `guicorn`. no lugar de app deve ser substituído pelo nome do arquivo principal da aplicação (`main`).
 
 > web: gunicorn app:app
 
@@ -59,10 +61,10 @@ Aqui passamos a configuração para rodar o servidor. iremos utilizar o 'guicorn
 Todos os requisitos para rodar a aplicação (bibliotecas) devem ser informadas neste arquivo juntamente de suas versões.
 Temos duas formas de obter estes valores:
 
-'pip freeze': É a forma mais simples, mas ele pega todas as bibliotecas do pip, então será necessário ajustes, o que não é muito bom.
+`pip freeze`: É a forma mais simples, mas ele pega todas as bibliotecas do pip, então será necessário ajustes, o que não é muito bom.
 > pip freeze > requirements.txt
 
-'pipreqs' é uma forma mais simples. tudo que você precisa é instalá-lo. e passar para o comando o caminho de onde ele será gerado.
+`pipreqs`: É mais rápido e só entrega o que precisa. Basta instalá-lo. e passar um parâmetro para o comando com caminho de onde ele será gerado.
 
 <pre>
 $ pip install pipreqs
