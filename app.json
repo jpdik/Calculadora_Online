@@ -1,0 +1,7 @@
+{
+  "name": "Calculadora Online",
+  "description": "Calculadora remota",
+  "repository": "https://github.com/jpdik/Calculadora_Online",
+  "logo": "https://github.com/jpdik/Calculadora_Online/blob/master/img/logo.jpg?raw=true",
+  "keywords": ["python", "calculadora", "remota"]
+}
