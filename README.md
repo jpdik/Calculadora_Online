@@ -50,7 +50,7 @@ $ heroku create [NomeAplicação]
 Será criado um uma aplicativo contendo na URL o parâmetro passado na função:
 
 <pre>
-NomeAplicação.herokuapp.com
+https://NomeAplicação.herokuapp.com
 </pre>
 
 Caso não passe ele gerará um nome aleatório e o exibirá.
