@@ -37,4 +37,4 @@ def calcular():
   return json.dumps({'resposta': 'Conectado'})
 
 if __name__ == "__main__":
-  app.run(debug=True, host='192.168.1.109')
+  app.run(debug=True)
