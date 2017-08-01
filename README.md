@@ -6,6 +6,7 @@ Calculadora que realiza cálculos através de um servidor remoto transparentemen
 </p>
 
 ## Deploy automático
+Você pode ver um exemplo aqui.
 <a href="https://heroku.com/deploy?template=https://github.com/jpdik/Calculadora_Online">
   <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
 </a>
@@ -115,3 +116,6 @@ Para checar erros de execução, verifique os logs:
 <pre>
 heroku logs
 </pre>
+
+# Informações adicionais
+Caso não consiga realizar os cálculos, provavelmente o servidor que está sendo utlizado para rodar o script `Servidor/sv_calc.py` está offline. Você precisará modificar o IP do socket dele e do arquivo `app.py'
