@@ -118,4 +118,4 @@ heroku logs
 </pre>
 
 # Informações adicionais
-Caso não consiga realizar os cálculos, provavelmente o servidor que está sendo utlizado para rodar o script `Servidor/sv_calc.py` está offline. Você precisará modificar o IP do socket dele e do arquivo `app.py'
+Caso não consiga realizar os cálculos, provavelmente o servidor que está sendo utlizado para rodar o script `Servidor/sv_calc.py` está offline. Você precisará modificar o IP do socket dele e do arquivo `app.py`
