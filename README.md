@@ -55,6 +55,8 @@ Precisamos criar e modificar os arquivos de configuração `Procfile`, `requirem
 #### Procfile
 Aqui passamos a configuração para rodar o servidor. iremos utilizar o `guicorn`. no lugar de app deve ser substituído pelo nome do arquivo principal da aplicação (`main`).
 
+O arquivo `Procfile` deverá ficar da seguinte forma:
+
 > web: gunicorn app:app
 
 #### requirements.txt
@@ -62,7 +64,9 @@ Todos os requisitos para rodar a aplicação (bibliotecas) devem ser informadas 
 Temos duas formas de obter estes valores:
 
 `pip freeze`: É a forma mais simples, mas ele pega todas as bibliotecas do pip, então será necessário ajustes, o que não é muito bom.
-> pip freeze > requirements.txt
+<pre>
+pip freeze > requirements.txt
+</pre>
 
 `pipreqs`: É mais rápido e só entrega o que precisa. Basta instalá-lo. e passar um parâmetro para o comando com caminho de onde ele será gerado.
 
@@ -71,8 +75,16 @@ $ pip install pipreqs
 $ pipreqs /path/to/project
 </pre>
 
+O arquivo `requirements.txt` ficará parecido com isto:
+
+> gunicorn==19.7.1
+> requests==2.9.1
+> Flask==0.12.2
+
+As vezes o guicorn não é reconhecido, precisando ser inserido manualmente.
+
 #### runtime.txt
-Precisamos informar para o heroku a versão do python também. Ele está prédefinido como python 3, então através deste arquivo modificamos:
+Precisamos informar para o heroku a versão do python também. Ele está prédefinido como python 3, então através deste arquivo o modificamos e deixamos parecido com este arquivo `runtime.txt`:
 
 >python-2.7.12
 
