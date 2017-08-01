@@ -1,5 +1,5 @@
 # Calculadora_Online
-Realizar cálculos em outro sistema de forma transparente
+Calculadora que realiza cálculos através de um servidor remoto transparentemente.
 
 # Configurar Heroku para Python
 Se ainda não o tiver, instale o heroku pelo comando:
@@ -50,7 +50,7 @@ Através deste link voçê terá acesso a sua aplicação.
 ## Configurando maquina antes do Upload
 Precisamos passar informações importantes para o heroku através de arquivos de configuração.
 
-Precisamos configurar o `Procfile` o `requirements.txt` e o `runtime.txt`.
+Precisamos criar e modificar os arquivos de configuração `Procfile`, `requirements.txt` e `runtime.txt`.
 
 #### Procfile
 Aqui passamos a configuração para rodar o servidor. iremos utilizar o `guicorn`. no lugar de app deve ser substituído pelo nome do arquivo principal da aplicação (`main`).
