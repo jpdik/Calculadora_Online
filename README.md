@@ -5,6 +5,11 @@ Calculadora que realiza cálculos através de um servidor remoto transparentemen
   <img src="https://github.com/jpdik/Calculadora_Online/blob/master/img/example.png?raw=true" width="150"/>
 </p>
 
+## Deploy automático
+<a href="https://heroku.com/deploy?template=https://github.com/jpdik/Calculadora_Online">
+  <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
+</a>
+
 # Configurar Heroku para Python
 Se ainda não o tiver, instale o heroku pelo comando:
 
