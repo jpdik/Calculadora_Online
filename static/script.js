@@ -49,14 +49,21 @@ $(document).ready(function(){
 		$('#visor').val("");
 	}
 
+	function erro_visor(){
+		$('#visor').val("Expressão mal formada")	
+	}
+
 	function Calcular(){
 		var jsonAsString = JSON.stringify({ valores: $('#visor').val().split(" ")});
 
 		$.ajax({
 			url: window.location.href+'calcular',
 				success: function (e) {
-				    var resp = JSON.parse(JSON.stringify(e));
-					$('#visor').val(resp['resposta'])
+				    var resp = JSON.parse(e);
+				    if(resp['Erro'] == false)
+						$('#visor').val(resp['Resultado'])
+					else
+						erro_visor()
 				},
 				error: function (e) {
 					alert(e)
@@ -74,7 +81,7 @@ $(document).ready(function(){
 		var tecla = event.key;
 		var key = event.keyCode;
 
-		if(tecla >= 0 || tecla <= 9 || tecla == "+" || tecla == "-" || tecla == "*" || tecla == "/" || tecla == "%") {
+		if(tecla >= 0 || tecla <= 9 || tecla == "+" || tecla == "-" || tecla == "*" || tecla == "/" || tecla == "%" || tecla == '.') {
 			Inserir_Valor(tecla);
 		}
 		else if(key == 8){

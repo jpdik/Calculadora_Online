@@ -14,3 +14,8 @@ button[type="button"]{
   margin-left: auto;
   margin-right: auto;
 }
+
+#equal{
+  padding-left: 34px;
+  padding-right: 54px;
+}

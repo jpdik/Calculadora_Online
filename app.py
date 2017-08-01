@@ -6,6 +6,7 @@ import sys
 import requests
 import socket
 import threading
+import calc
 
 from flask import Flask, Response, render_template, request
 
@@ -33,8 +34,13 @@ def api():
 @app.route('/calcular', methods=['POST'])
 def calcular():
   content = request.get_json(silent=True)
-  print content
-  return json.dumps({'resposta': 'Conectado'})
+
+  calcu = calc.Calc("svjp.ddns.net", 8888)
+
+  calcu.inserir_valores(json.dumps(content))
+
+  calcu.calcular()
+  return json.dumps(calcu.resultado())
 
 if __name__ == "__main__":
   app.run(debug=True)
