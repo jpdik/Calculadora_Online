@@ -3,6 +3,9 @@ $(document).ready(function(){
 	var ligada = true;
 
 	$( ".btn" ).click(function() {
+		if($('#visor').val() == "Expressão mal formada")
+			$('#visor').val("") 
+
 		comando = $(this).text().charCodeAt(0);
 		
 		if(comando == 61){
@@ -66,7 +69,7 @@ $(document).ready(function(){
 						erro_visor()
 				},
 				error: function (e) {
-					alert(e)
+					alert("Não foi possível realizar o cálculo.")
 				},
 			type: 'POST',
 		    data: jsonAsString,
@@ -77,7 +80,9 @@ $(document).ready(function(){
 
 	//Analise de tecla pressionada dentro do body(corpo da página) para realizar os comandos.
 	document.querySelector('body').addEventListener('keyup', function(event) {
- 
+ 		if($('#visor').val() == "Expressão mal formada")
+			$('#visor').val("")
+
 		var tecla = event.key;
 		var key = event.keyCode;
 
