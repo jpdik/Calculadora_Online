@@ -35,7 +35,7 @@ def api():
 def calcular():
   content = request.get_json(silent=True)
 
-  calcu = calc.Calc("svjp.ddns.net", 8888)
+  calcu = calc.Calc("10.3.1.36", 8888)
 
   calcu.inserir_valores(json.dumps(content))
 

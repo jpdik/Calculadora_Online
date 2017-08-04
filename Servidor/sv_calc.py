@@ -56,7 +56,7 @@ while True:
 	s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 
 	#O argumento é uma tupla de 2 posições
-	s.bind(('127.0.0.1', 8888))
+	s.bind(('10.3.1.36', 8888))
 
 	#Coloca o socket pra aguardar conexões, trava nessa parte
 	s.listen(1)
